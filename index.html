@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lang Switcher</title>
+    <script type="module" src="/src/main.ts" defer></script>
+  </head>
+  <body>
+    <main class="panel">
+      <header>
+        <h1>Lang Switcher</h1>
+        <p class="subtitle">Convert typed text between keyboard layouts</p>
+      </header>
+
+      <section class="field">
+        <label for="hotkey-word">Last word hotkey</label>
+        <input id="hotkey-word" type="text" spellcheck="false" autocomplete="off" />
+        <p class="hint">Click field → press combo → Save. Default: Pause (Windows) / F11 (macOS)</p>
+      </section>
+
+      <section class="field">
+        <label for="hotkey-selection">Selection hotkey</label>
+        <input id="hotkey-selection" type="text" spellcheck="false" autocomplete="off" />
+        <p class="hint">Click field → press combo → Save. Default: Shift+Pause (Windows) / Shift+F11 (macOS)</p>
+      </section>
+
+      <section class="field">
+        <label for="layout-pair">Layout pair</label>
+        <select id="layout-pair"></select>
+      </section>
+
+      <section class="field row-check">
+        <label>
+          <input id="switch-system-layout" type="checkbox" />
+          Switch system keyboard layout after convert
+        </label>
+        <p class="hint">Like Punto: after fixing text, also change OS input language</p>
+      </section>
+
+      <section class="field row-check">
+        <label>
+          <input id="autostart" type="checkbox" />
+          Start with system
+        </label>
+      </section>
+
+      <section class="field">
+        <label for="preview-input">Preview map</label>
+        <div class="preview-row">
+          <input id="preview-input" type="text" placeholder="ghbdtn" />
+          <button id="preview-btn" type="button">Convert</button>
+        </div>
+        <p id="preview-out" class="preview-out"></p>
+      </section>
+
+      <section class="field">
+        <label>Live test (focus another app first)</label>
+        <div class="preview-row">
+          <button id="test-word-btn" type="button">Test last word</button>
+          <button id="test-sel-btn" type="button">Test selection</button>
+        </div>
+        <p class="hint">Click, then within 0.25s switch to Notepad/browser and select or type a word</p>
+      </section>
+
+      <footer>
+        <p id="status" class="status" aria-live="polite"></p>
+        <button id="save-btn" type="button" class="primary">Save</button>
+      </footer>
+
+      <p class="footnote">
+        Close the window to keep running in the tray. macOS needs Accessibility permission.
+        On Windows, elevated (admin) apps may ignore key simulation unless this app is also elevated.
+        Classic Punto on Mac used Option alone — you can assign a custom combo above.
+      </p>
+    </main>
+  </body>
+</html>

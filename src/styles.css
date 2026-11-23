@@ -1,0 +1,150 @@
+:root {
+  color: #1a1d23;
+  background:
+    radial-gradient(1200px 500px at 10% -10%, #dfe8ff 0%, transparent 55%),
+    radial-gradient(900px 400px at 100% 0%, #e8f6ef 0%, transparent 50%),
+    #f3f5f8;
+  font-family: "Segoe UI", "IBM Plex Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.panel {
+  width: min(420px, 100%);
+  margin: 0 auto;
+  padding: 28px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.55rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 6px 0 0;
+  color: #5b6472;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-weight: 600;
+  color: #2a3140;
+}
+
+.hint,
+.footnote {
+  margin: 0;
+  color: #6b7382;
+  font-size: 0.85rem;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  border: 1px solid #c9d0db;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+}
+
+input[type="text"]:focus,
+select:focus {
+  outline: 2px solid #3b6fd9;
+  outline-offset: 1px;
+}
+
+input.capturing {
+  outline: 2px solid #c45c26;
+  outline-offset: 1px;
+  background: #fff7f0;
+}
+
+.row-check label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.preview-row {
+  display: flex;
+  gap: 8px;
+}
+
+.preview-row input {
+  flex: 1;
+}
+
+.preview-out {
+  min-height: 1.2em;
+  margin: 0;
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  color: #1847a8;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.status {
+  margin: 0;
+  color: #5b6472;
+  min-height: 1.2em;
+}
+
+button {
+  border: 1px solid #b8c0ce;
+  border-radius: 8px;
+  padding: 9px 14px;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: #3b6fd9;
+}
+
+button.primary {
+  background: #2f5fce;
+  border-color: #2f5fce;
+  color: #fff;
+  min-width: 96px;
+}
+
+button.primary:hover {
+  background: #254fb0;
+}
+
+.footnote {
+  margin-top: 4px;
+}
